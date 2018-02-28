@@ -75,6 +75,9 @@ BOARD_HAVE_QCOM_FM := true
 # Input
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
