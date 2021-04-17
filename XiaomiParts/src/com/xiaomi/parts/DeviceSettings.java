@@ -33,7 +33,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.xiaomi.parts.kcal.KCalSettingsActivity;
 import com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity;
 import com.xiaomi.parts.speaker.ClearSpeakerActivity;
 import com.xiaomi.parts.preferences.CustomSeekBarPreference;
@@ -52,7 +51,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TAG = "XiaomiParts";
 
     public static final String CATEGORY_DISPLAY = "display";
-    public static final String PREF_DEVICE_KCAL = "device_kcal";
 
     public static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     public static final String PREF_HEADSET = "dirac_headset_pref";
@@ -83,7 +81,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_CHARGING_SWITCH = "smart_charging";
     public static final String KEY_RESET_STATS = "reset_stats";
 
-    private Preference mKcal;
     private Preference mClearSpeakerPref;
     private Preference mAmbientPref;
     private SecureSettingSwitchPreference mEnableDirac;
@@ -110,14 +107,6 @@ public class DeviceSettings extends PreferenceFragment implements
         String device = FileUtils.getStringProp("ro.build.product", "unknown");
 
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
-
-        mKcal = findPreference(PREF_DEVICE_KCAL);
-
-        mKcal.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
-            startActivity(intent);
-            return true;
-        });
 
         mAmbientPref = findPreference("ambient_display_gestures");
         mAmbientPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
