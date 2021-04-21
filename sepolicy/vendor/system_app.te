@@ -30,3 +30,8 @@ allow system_app vendor_sysfs_msm_perf:dir { search };
 
 # USB Fastcharge
 allow system_app sysfs_usbcharge:file { open read getattr write };
+
+allow system_app apk_data_file:dir { write };
+allow system_app sysfs_zram:dir { search };
+allow system_app sysfs_zram:file { read };
+allow system_app sysfs_thermal:file { write };
