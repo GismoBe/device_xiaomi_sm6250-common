@@ -20,3 +20,4 @@ allow init vendor_configs_file:file mounton;
 allow init debugfs_tracing_debug:dir mounton;
 
 allow init sysfs_battery_supply:file { setattr };
+allow init adsprpcd_file:file mounton;
