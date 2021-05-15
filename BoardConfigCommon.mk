@@ -203,9 +203,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# Side FP key for InputDispatcher to skip
-TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
-
 # Treble
 BOARD_VNDK_VERSION := current
 
