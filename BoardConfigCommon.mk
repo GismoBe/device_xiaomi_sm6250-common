@@ -65,9 +65,6 @@ AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAS_QCA_FM_SOC := cherokee
 BOARD_HAVE_QCOM_FM := true
 
-# Input
-TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
-
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
